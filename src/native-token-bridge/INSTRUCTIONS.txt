@@ -137,5 +137,5 @@ Now, APPROVE toke to be spent by the bridge contract: cast send --rpc-url local-
 Send the tokens:
 now teleport the tokens: cast send --rpc-url local-c --private-key $PK 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D "send((bytes32, address, address, uint256, uint256, uint256), uint256)" "(0x9e55bc992c779e507bac5e505bcbc34f03e2182a3f713459e3a38b210381639b, 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922, 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC, 0, 0, 69420)" 50
 
-Check if the bridge is collaterized:
-collaterized check: cast call --rpc-url mysubnet 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922 "isCollateralized()(bool)"
+Check if the bridge is cCollateralized:
+Collateralized check: cast call --rpc-url mysubnet 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922 "isCollateralized()(bool)"
