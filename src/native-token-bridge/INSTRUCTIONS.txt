@@ -1,0 +1,141 @@
+cMessenger = "0x253b2784c75e510dD0fF1da844684a1aC0aa5fcf"
+cRegistry = "0x17aB05351fC94a1a67Bf3f56DdbB941aE6c63E25"
+cBlockchainID = "0xabc1bd35cb7313c8a2b62980172e6d7ef42aaa532c870499a148858b0b6a34fd"
+
+subnetMessenger = "0x253b2784c75e510dD0fF1da844684a1aC0aa5fcf"
+subnetRegistry = "0x70Bbad0a9E2C8f550A03B733859C9Db727Bd2C14"
+subnetBlockchainID = "0x5f8b06e8f7b78b4a4389c67f312a4cd6e6895231b4f243cc7c5ea0242ee1da7f"
+
+admin = "0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC"
+
+ _____       _        _ _
+|  __ \     | |      (_) |
+| |  | | ___| |_ __ _ _| |___
+| |  | |/ _ \ __/ _  | | / __|
+| |__| |  __/ || (_| | | \__ \
+|_____/ \___|\__\__,_|_|_|___/
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+|           PARAMETER            |                                                          VALUE                                                           |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| Subnet Name                    | mysubnet                                                                                                                 |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| ChainID                        | 123                                                                                                                      |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| Token Name                     | ASH Token                                                                                                                |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| Token Symbol                   | ASH                                                                                                                      |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| VM Version                     | v0.6.3                                                                                                                   |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| VM ID                          | qDNsVQJfGpi2RfCcESbeZauGqPVjtXwoopVMtrGkdoUxmFKov                                                                        |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| Local Network SubnetID         | 2CZP2ndbQnZxTzGuZjPrJAm5b4s2K2Bcjh8NqWoymi8NZMLYQk                                                                       |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| Local Network RPC URL          | http://127.0.0.1:9650/ext/bc/2CjTG2enoyx3ajJbTgwtSGWkzaefkN6eDetgYMmEEMqBQJDGcc/rpc                                      |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| Codespace RPC URL              | https://effective-trout-4gpqxw477v93wv-9650.app.github.dev/ext/bc/2CjTG2enoyx3ajJbTgwtSGWkzaefkN6eDetgYMmEEMqBQJDGcc/rpc |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| Local Network BlockchainID     | 2CjTG2enoyx3ajJbTgwtSGWkzaefkN6eDetgYMmEEMqBQJDGcc                                                                       |
++                                +--------------------------------------------------------------------------------------------------------------------------+
+|                                | 0x9e55bc992c779e507bac5e505bcbc34f03e2182a3f713459e3a38b210381639b                                                       |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| Local Network Teleporter       | 0x253b2784c75e510dD0fF1da844684a1aC0aa5fcf                                                                               |
+| Messenger Address              |                                                                                                                          |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| Local Network Teleporter       | 0xB26Edce2Cd21f776BDA76546Fc1fA55116fdcC69                                                                               |
+| Registry Address               |                                                                                                                          |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+
+  _____              _____             __ _
+ / ____|            / ____|           / _(_)
+| |  __  __ _ ___  | |     ___  _ __ | |_ _  __ _
+| | |_ |/ _  / __| | |    / _ \| '_ \|  _| |/ _  |
+| |__| | (_| \__ \ | |___| (_) | | | | | | | (_| |
+ \_____|\__,_|___/  \_____\___/|_| |_|_| |_|\__, |
+                                             __/ |
+                                            |___/
++--------------------------+-------------+
+|      GAS PARAMETER       |    VALUE    |
++--------------------------+-------------+
+| GasLimit                 |     8000000 |
++--------------------------+-------------+
+| MinBaseFee               | 25000000000 |
++--------------------------+-------------+
+| TargetGas (per 10s)      |    15000000 |
++--------------------------+-------------+
+| BaseFeeChangeDenominator |          36 |
++--------------------------+-------------+
+| MinBlockGasCost          |           0 |
++--------------------------+-------------+
+| MaxBlockGasCost          |     1000000 |
++--------------------------+-------------+
+| TargetBlockRate          |           2 |
++--------------------------+-------------+
+| BlockGasCostStep         |      200000 |
++--------------------------+-------------+
+
+          _         _
+    /\   (_)       | |
+   /  \   _ _ __ __| |_ __ ___  _ __
+  / /\ \ | | '__/ _  | '__/ _ \| '_ \
+ / ____ \| | | | (_| | | | (_) | |_) |
+/_/    \_\_|_|  \__,_|_|  \___/| .__/
+                               | |
+                               |_|
++--------------------------------+--------------------------------------------+------------------------+-----------------------+------------------------------------------------------------------+
+|          DESCRIPTION           |                  ADDRESS                   | AIRDROP AMOUNT (10^18) | AIRDROP AMOUNT (WEI)  |                           PRIVATE KEY                            |
++--------------------------------+--------------------------------------------+------------------------+-----------------------+------------------------------------------------------------------+
+| Main funded account EWOQ       | 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC |                    100 | 100000000000000000000 | 56289e99c94b6912bfc12adc093c9b51124f0dc54ac7a766b2bc5ccf558d8027 |
++--------------------------------+--------------------------------------------+------------------------+-----------------------+------------------------------------------------------------------+
+| Teleporter deploys             | 0xb83873a3859C8C0d461aC0b5C3d6e94688954e29 |                    600 | 600000000000000000000 | d4984eb4ba2c606de0196dcac8943000e44482e262bd5494c7ac256ddf8e98e3 |
+| cli-teleporter-deployer        |                                            |                        |                       |                                                                  |
++--------------------------------+--------------------------------------------+------------------------+-----------------------+------------------------------------------------------------------+
+
+
+  _____                                    _ _
+ |  __ \                                  (_) |
+ | |__) | __ ___  ___ ___  _ __ ___  _ __  _| | ___  ___
+ |  ___/ '__/ _ \/ __/ _ \| '_   _ \| '_ \| | |/ _ \/ __|
+ | |   | | |  __/ (_| (_) | | | | | | |_) | | |  __/\__ \
+ |_|   |_|  \___|\___\___/|_| |_| |_| .__/|_|_|\___||___/
+                                    | |
+                                    |_|
+
++---------------+--------------------------------------------+-------------------+
+|  PRECOMPILE   |              ADMIN ADDRESSES               | ENABLED ADDRESSES |
++---------------+--------------------------------------------+-------------------+
+| Warp          | n/a                                        | n/a               |
++---------------+--------------------------------------------+-------------------+
+| Native Minter | 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922 |                   |
++---------------+--------------------------------------------+-------------------+
+
+TASK STARTS HERE:
+
+Deploy ERC20 contract:
+forge create --rpc-url local-c --private-key $PK src/native-token-bridge/mocks/ExampleWASH.sol:ExampleWASH
+
+Deploy bridge contract on source:
+forge create --rpc-url local-c --private-key $PK src/native-token-bridge/ERC20Source.sol:ERC20Source --constructor-args "0x17aB05351fC94a1a67Bf3f56DdbB941aE6c63E25" "0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC" "0x5DB9A7629912EBF95876228C24A848de0bfB43A9"
+
+Deploy bridge contract on destination:
+forge create --rpc-url mysubnet --private-key $PK src/native-token-bridge/NativeTokenDestination.sol:NativeTokenDestination --constructor-args '("ASH", teleporter registry on destination, 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC, 0xabc1bd35cb7313c8a2b62980172e6d7ef42aaa532c870499a148858b0b6a34fd, 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D, 100, 18, true, 5)'
+
+default source address (when deployed second): 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D
+default destination address: 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922
+
+
+Mint 5000 tokens:
+cast send --rpc-url local-c --private-key $PK 0x5DB9A7629912EBF95876228C24A848de0bfB43A9 "deposit()" --value 5000000000000000000000
+
+check balance using this command: cast call --rpc-url local-c --private-key $PK 0x5DB9A7629912EBF95876228C24A848de0bfB43A9 "balanceOf(address)" 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC
+you have balance in your address by now. you can try and deposit some token to bridge contract: cast send --rpc-url local-c --private-key $PK 0x5DB9A7629912EBF95876228C24A848de0bfB43A9 "transferFrom(address,address,uint256)" 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D 200
+
+
+APPROVE tokens to be spent by bridge contract on C-chain:
+Now, APPROVE toke to be spent by the bridge contract: cast send --rpc-url local-c --private-key $PK 0x5DB9A7629912EBF95876228C24A848de0bfB43A9 "approve(address, uint256)" 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D 200
+
+Send the tokens:
+now teleport the tokens: cast send --rpc-url local-c --private-key $PK 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D "send((bytes32, address, address, uint256, uint256, uint256), uint256)" "(0x9e55bc992c779e507bac5e505bcbc34f03e2182a3f713459e3a38b210381639b, 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922, 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC, 0, 0, 69420)" 50
+
+Check if the bridge is collaterized:
+collaterized check: cast call --rpc-url mysubnet 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922 "isCollateralized()(bool)"
