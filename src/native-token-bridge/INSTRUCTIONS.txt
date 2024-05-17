@@ -117,8 +117,9 @@ forge create --rpc-url local-c --private-key $PK src/native-token-bridge/mocks/E
 Deploy bridge contract on source:
 forge create --rpc-url local-c --private-key $PK src/native-token-bridge/ERC20Source.sol:ERC20Source --constructor-args "0x17aB05351fC94a1a67Bf3f56DdbB941aE6c63E25" "0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC" "0x5DB9A7629912EBF95876228C24A848de0bfB43A9"
 
-Deploy bridge contract on destination:
-forge create --rpc-url mysubnet --private-key $PK src/native-token-bridge/NativeTokenDestination.sol:NativeTokenDestination --constructor-args '("ASH", teleporter registry on destination, 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC, 0xabc1bd35cb7313c8a2b62980172e6d7ef42aaa532c870499a148858b0b6a34fd, 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D, 100, 18, true, 5)'
+Deploy bridge contract on destination: update teleporter subnet registry here
+this command will specify the collateral to be 700 and the multiplier should be true
+forge create --rpc-url mysubnet --private-key $PK src/native-token-bridge/NativeTokenDestination.sol:NativeTokenDestination --constructor-args '("ASH", 0x0C8a4406e5CC48B1dDfd702018E9999E01978F2f, 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC, 0x55e1fcfdde01f9f6d4c16fa2ed89ce65a8669120a86f321eef121891cab61241, 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D, 700000000000000000000, 18, true, 0)'
 
 default source address (when deployed second): 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D
 default destination address: 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922
@@ -131,11 +132,16 @@ check balance using this command: cast call --rpc-url local-c --private-key $PK 
 you have balance in your address by now. you can try and deposit some token to bridge contract: cast send --rpc-url local-c --private-key $PK 0x5DB9A7629912EBF95876228C24A848de0bfB43A9 "transferFrom(address,address,uint256)" 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D 200
 
 
-APPROVE 1000 tokens to be spent by bridge contract on C-chain:
-Now, APPROVE toke to be spent by the bridge contract: cast send --rpc-url local-c --private-key $PK 0x5DB9A7629912EBF95876228C24A848de0bfB43A9 "approve(address, uint256)" 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D 1000000000000000000000
+APPROVE tokens to be spent by bridge contract on C-chain:
+Now, APPROVE toke to be spent by the bridge contract: cast send --rpc-url local-c --private-key $PK 0x5DB9A7629912EBF95876228C24A848de0bfB43A9 "approve(address, uint256)" 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D 2000000000000000000000
 
 Send the tokens:
-now teleport the tokens: cast send --rpc-url local-c --private-key $PK 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D "send((bytes32, address, address, uint256, uint256, uint256), uint256)" "(0x9e55bc992c779e507bac5e505bcbc34f03e2182a3f713459e3a38b210381639b, 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922, 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC, 0, 0, 69420)" 1000000000000000000000
+now teleport the tokens: cast send --rpc-url local-c --private-key $PK 0x4Ac1d98D9cEF99EC6546dEd4Bd550b0b287aaD6D "send((bytes32, address, address, uint256, uint256, uint256), uint256)" "(0x57151cc1210d14e79fe7fbafded2b0e4a8e06c08cc60e028042660a436936377, 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922, 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC, 0, 0, 250000)" 1000
 
-Check if the bridge is Collateralized:
-Collateralized check: cast call --rpc-url mysubnet 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922 "isCollateralized()(bool)"
+check balance of ASH tokens: cast balance --rpc-url mysubnet 0x8db97C7cEcE249c2b98bDC0226Cc4C2A57BF52FC
+
+Check if the bridge is collaterized:
+collaterized check: cast call --rpc-url mysubnet 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922 "isCollateralized()(bool)"
+
+On source side, make sure this increases: bridgedBalances
+currentReserveImbalance should be decreasing after each teleporter message: cast call --rpc-url mysubnet 0x52C84043CD9c865236f11d9Fc9F56aa003c1f922 "currentReserveImbalance()(uint256)"
